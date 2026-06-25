@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskAssigner | Settings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/setting.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- window controls -->
+    <div class="window-controls">
+      <button id="minimize-btn" title="Minimize">─</button>
+      <button id="maximize-btn" title="Maximize">□</button>
+      <button id="close-btn" title="Close">✕</button>
+    </div>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">TaskAssigner</div>
+        <a href="#" class="nav-item" data-page="index.html">
+          <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-page="calendar.html">
+          <i class="fas fa-calendar"></i> Calendar
+        </a>
+        <a href="#" class="nav-item" data-page="report.html">
+          <i class="fas fa-chart-bar"></i> Reports
+        </a>
+        <a href="#" class="nav-item active" data-page="setting.html">
+          <i class="fas fa-cog"></i> Settings
+        </a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="header">
+          <h1 class="page-title" id="pageTitle">
+            <i class="fas fa-cog"> </i>Settings
+          </h1>
+          <div class="user-profile">
+            <!-- Notification Bell and Popup -->
+            <button
+              id="notificationBell"
+              class="notification-bell"
+              title="Notifications"
+            >
+              <i class="fas fa-bell"></i>
+              <span
+                id="notificationDot"
+                class="notification-dot"
+                style="display: none"
+                >0</span
+              >
+            </button>
+            <div id="notificationPopup" class="notification-popup"></div>
+            <!-- User Profile -->
+            <p>Hi,<span id="usernameDisplay"></span></p>
+            <div class="user-avatar" id="userAvatar"></div>
+          </div>
+        </div>
+        <!-- Add this inside <div class="main-content">, after the header -->
+        <div class="settings-section">
+          <form id="userSettingsForm">
+            <div class="form-group">
+              <label for="userNameInput">User Name</label>
+              <input type="text" id="userNameInput" name="userName" required />
+            </div>
+            <div class="form-group">
+              <label for="workStartInput">Work Start Time</label>
+              <input
+                type="time"
+                id="workStartTimeInput"
+                name="workStart"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="workEndInput">Work End Time</label>
+              <input
+                type="time"
+                id="workEndTimeInput"
+                name="workEnd"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Off Days</label>
+              <div id="offDaysCheckboxes">
+                <label
+                  ><input type="checkbox" name="offDays" value="Monday" />
+                  Monday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Tuesday" />
+                  Tuesday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Wednesday" />
+                  Wednesday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Thursday" />
+                  Thursday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Friday" />
+                  Friday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Saturday" />
+                  Saturday</label
+                >
+                <label
+                  ><input type="checkbox" name="offDays" value="Sunday" />
+                  Sunday</label
+                >
+              </div>
+            </div>
+            <button type="submit" id="saveSettingsBtn">Save Settings</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../js/setting.js"></script>
+  </body>
+</html>

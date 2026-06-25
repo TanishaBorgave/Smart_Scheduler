@@ -1,0 +1,31 @@
+{
+  "name": "task-scheduler-pro",
+  "version": "1.0.0",
+  "description": "A personal task manager application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+     "start": "node server.js"
+  },
+  "author": "Tanisha Borgave",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.2",
+    "crypto-js": "^4.1.1"
+  },
+  "build": {
+    "appId": "com.example.task-scheduler-pro",
+    "productName": "Smart Scheduler",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "src/assets/logo.ico"
+    }
+  }
+}
